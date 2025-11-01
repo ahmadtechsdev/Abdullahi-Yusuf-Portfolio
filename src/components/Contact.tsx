@@ -1,0 +1,154 @@
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card } from "@/components/ui/card";
+import { Mail, Linkedin, MapPin, Send } from "lucide-react";
+import { toast } from "sonner";
+
+const Contact = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast.success("Message sent! I'll get back to you soon.");
+  };
+
+  return (
+    <section id="contact" className="py-24 bg-gradient-to-br from-primary/5 to-accent/5">
+      <div className="container mx-auto px-4">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 mb-4">
+              <div className="h-1 w-12 bg-secondary rounded-full"></div>
+              <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Get in Touch</span>
+              <div className="h-1 w-12 bg-secondary rounded-full"></div>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+              Contact
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Let's discuss your next BIM project or collaboration opportunity
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Contact Form */}
+            <Card className="p-8 border-2">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-2">
+                    Name
+                  </label>
+                  <Input 
+                    id="name"
+                    placeholder="Your name" 
+                    required
+                    className="border-2 focus:border-secondary"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2">
+                    Email
+                  </label>
+                  <Input 
+                    id="email"
+                    type="email" 
+                    placeholder="your.email@example.com" 
+                    required
+                    className="border-2 focus:border-secondary"
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-2">
+                    Message
+                  </label>
+                  <Textarea 
+                    id="message"
+                    placeholder="Tell me about your project..." 
+                    required
+                    rows={5}
+                    className="border-2 focus:border-secondary resize-none"
+                  />
+                </div>
+                
+                <Button 
+                  type="submit" 
+                  size="lg"
+                  className="w-full bg-accent hover:bg-accent/90 text-white font-semibold group"
+                >
+                  <Send className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  Send Message
+                </Button>
+              </form>
+            </Card>
+
+            {/* Contact Details */}
+            <div className="space-y-6">
+              <Card className="p-6 border-2 hover:border-secondary/50 transition-colors group">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-secondary/10 to-accent/10 group-hover:from-secondary/20 group-hover:to-accent/20 transition-all">
+                    <Mail className="h-6 w-6 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">Email</h3>
+                    <a 
+                      href="mailto:info@sulemuri.com"
+                      className="text-muted-foreground hover:text-accent transition-colors"
+                    >
+                      info@sulemuri.com
+                    </a>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-6 border-2 hover:border-secondary/50 transition-colors group">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-secondary/10 to-accent/10 group-hover:from-secondary/20 group-hover:to-accent/20 transition-all">
+                    <Linkedin className="h-6 w-6 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">LinkedIn</h3>
+                    <a 
+                      href="https://linkedin.com/in/abdullahisulemuri"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-accent transition-colors"
+                    >
+                      linkedin.com/in/abdullahisulemuri
+                    </a>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-6 border-2 hover:border-secondary/50 transition-colors group">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-gradient-to-br from-secondary/10 to-accent/10 group-hover:from-secondary/20 group-hover:to-accent/20 transition-all">
+                    <MapPin className="h-6 w-6 text-accent" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">Location</h3>
+                    <p className="text-muted-foreground">United Kingdom</p>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Quote Card */}
+              <Card className="p-6 bg-gradient-to-br from-primary to-primary/90 border-0">
+                <blockquote className="text-white">
+                  <p className="text-lg font-medium mb-2">
+                    "Let's collaborate to bring your vision to life with cutting-edge BIM solutions."
+                  </p>
+                  <footer className="text-secondary font-semibold">
+                    — Abdullahi Sulemuri
+                  </footer>
+                </blockquote>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
