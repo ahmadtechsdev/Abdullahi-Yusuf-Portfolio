@@ -41,13 +41,14 @@ const Skills = () => {
               return (
                 <Card
                   key={index}
-                  className="group p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-secondary/50 bg-card"
+                  className="group p-6 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-secondary/50 bg-card relative overflow-hidden"
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-secondary/10 to-accent/10 group-hover:from-secondary/20 group-hover:to-accent/20 transition-all">
+                  <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                  <div className="flex items-start gap-4 relative z-10">
+                    <div className="p-3 rounded-xl bg-gradient-to-br from-secondary/10 to-accent/10 group-hover:from-secondary/20 group-hover:to-accent/20 group-hover:scale-110 transition-all duration-300">
                       <Icon className="h-6 w-6 text-accent" />
                     </div>
-                    <h3 className="text-base font-semibold text-foreground leading-tight pt-2">
+                    <h3 className="text-base font-semibold text-foreground leading-tight pt-2 group-hover:text-accent transition-colors">
                       {skill.title}
                     </h3>
                   </div>

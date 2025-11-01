@@ -3,8 +3,8 @@ import { ArrowDown } from "lucide-react";
 import profilePhoto from "@/assets/profile-photo.jpg";
 
 const Hero = () => {
-  const scrollToWork = () => {
-    document.getElementById('work')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToProjects = () => {
+    window.location.href = "/projects";
   };
 
   return (
@@ -32,9 +32,14 @@ const Hero = () => {
               Delivering innovative, data-driven, and ISO 19650-aligned design solutions.
             </p>
             
+            <div className="flex items-center gap-3 text-secondary">
+              <div className="h-px w-12 bg-secondary"></div>
+              <p className="text-base font-medium">University of Roehampton, London</p>
+            </div>
+            
             <div className="flex gap-4 pt-4">
               <Button 
-                onClick={scrollToWork}
+                onClick={scrollToProjects}
                 size="lg"
                 className="bg-secondary hover:bg-secondary/90 text-primary font-semibold group"
               >

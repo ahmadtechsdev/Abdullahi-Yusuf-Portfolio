@@ -39,12 +39,12 @@ const Footer = () => {
                 >
                   Skills
                 </button>
-                <button 
-                  onClick={() => scrollToSection('work')}
+                <a 
+                  href="/projects"
                   className="text-gray-300 hover:text-secondary transition-colors"
                 >
                   Projects
-                </button>
+                </a>
                 <button 
                   onClick={() => scrollToSection('contact')}
                   className="text-gray-300 hover:text-secondary transition-colors"
