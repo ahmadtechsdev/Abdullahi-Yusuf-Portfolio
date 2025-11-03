@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+import profileHero from "@/assets/profile-hero.jpg";
 
 const Hero = () => {
   const scrollToProjects = () => {
@@ -14,48 +15,71 @@ const Hero = () => {
       <div className="absolute bottom-20 left-20 w-96 h-96 bg-secondary/5 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Centered content */}
-          <div className="space-y-8 animate-fade-in">
-            <div className="inline-block">
-              <span className="text-primary font-semibold text-sm uppercase tracking-wider bg-primary/10 px-6 py-3 rounded-full">
-                BIM Professional
-              </span>
-            </div>
-            
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
-              I am a BIM Expert & <br />
-              <span className="text-primary">Design Manager</span>
-            </h1>
-            
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Delivering innovative, data-driven, and ISO 19650-aligned design solutions.
-            </p>
-            
-            <div className="flex items-center justify-center gap-3 text-primary">
-              <div className="h-px w-12 bg-primary"></div>
-              <p className="text-base font-medium">University of Roehampton, London</p>
-              <div className="h-px w-12 bg-primary"></div>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-              <Button 
-                onClick={scrollToProjects}
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-white font-semibold group shadow-lg hover:shadow-xl transition-all"
-              >
-                View My Work
-                <ArrowDown className="ml-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
-              </Button>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left side - Text content */}
+            <div className="space-y-8 animate-fade-in">
+              <div className="inline-block">
+                <span className="text-primary font-semibold text-sm uppercase tracking-wider bg-primary/10 px-6 py-3 rounded-full">
+                  BIM Professional
+                </span>
+              </div>
               
-              <Button 
-                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                size="lg"
-                variant="outline"
-                className="border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all"
-              >
-                Get in Touch
-              </Button>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
+                I am a BIM Expert & <br />
+                <span className="text-primary">Design Manager</span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+                Delivering innovative, data-driven, and ISO 19650-aligned design solutions.
+              </p>
+              
+              <div className="flex items-center gap-3 text-primary">
+                <div className="h-px w-12 bg-primary"></div>
+                <p className="text-base font-medium">University of Roehampton, London</p>
+                <div className="h-px w-12 bg-primary"></div>
+              </div>
+              
+              <div className="flex flex-col sm:flex-row gap-4 pt-4">
+                <Button 
+                  onClick={scrollToProjects}
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-white font-semibold group shadow-lg hover:shadow-xl transition-all"
+                >
+                  View My Work
+                  <ArrowDown className="ml-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
+                </Button>
+                
+                <Button 
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all"
+                >
+                  Get in Touch
+                </Button>
+              </div>
+            </div>
+
+            {/* Right side - Image */}
+            <div className="relative animate-fade-in lg:justify-self-end">
+              <div className="relative w-full max-w-md">
+                <div className="absolute inset-0 bg-primary/10 rounded-3xl blur-2xl transform rotate-3"></div>
+                <img
+                  src={profileHero}
+                  alt="Abdullahi Sulemuri - BIM Expert & Design Manager"
+                  className="relative rounded-3xl shadow-2xl w-full object-cover aspect-[3/4] border-4 border-white/50"
+                />
+                
+                {/* Floating badge */}
+                <div className="absolute -bottom-6 -right-6 bg-primary p-6 rounded-2xl shadow-xl transform hover:scale-105 transition-transform">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-white">ISO</div>
+                    <div className="text-xl font-bold text-white">19650</div>
+                    <div className="text-xs text-white/80 mt-1">Certified</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
