@@ -18,20 +18,20 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 bg-gradient-to-br from-primary/5 to-accent/5">
+    <section id="skills" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 mb-4">
-              <div className="h-1 w-12 bg-secondary rounded-full"></div>
-              <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Expertise</span>
-              <div className="h-1 w-12 bg-secondary rounded-full"></div>
+            <div className="inline-flex items-center gap-2 mb-6">
+              <div className="h-1 w-12 bg-primary rounded-full"></div>
+              <span className="text-primary font-semibold text-sm uppercase tracking-wider">Expertise</span>
+              <div className="h-1 w-12 bg-primary rounded-full"></div>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-              Core Skills
+              Skills & Expertise
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Comprehensive expertise in BIM technologies and digital design delivery
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Comprehensive BIM expertise covering all aspects of digital design delivery
             </p>
           </div>
 
@@ -41,14 +41,13 @@ const Skills = () => {
               return (
                 <Card
                   key={index}
-                  className="group p-6 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-secondary/50 bg-card relative overflow-hidden"
+                  className="group p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/50 bg-white"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-br from-secondary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                  <div className="flex items-start gap-4 relative z-10">
-                    <div className="p-3 rounded-xl bg-gradient-to-br from-secondary/10 to-accent/10 group-hover:from-secondary/20 group-hover:to-accent/20 group-hover:scale-110 transition-all duration-300">
-                      <Icon className="h-6 w-6 text-accent" />
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
+                      <Icon className="h-6 w-6 text-primary" />
                     </div>
-                    <h3 className="text-base font-semibold text-foreground leading-tight pt-2 group-hover:text-accent transition-colors">
+                    <h3 className="text-base font-semibold text-foreground leading-tight pt-2 group-hover:text-primary transition-colors">
                       {skill.title}
                     </h3>
                   </div>

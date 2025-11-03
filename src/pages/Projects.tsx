@@ -47,20 +47,20 @@ const Projects = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary/5 to-accent/5">
+      <section className="pt-32 pb-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <div className="inline-flex items-center gap-2 mb-6">
-              <div className="h-1 w-12 bg-secondary rounded-full"></div>
-              <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Portfolio</span>
-              <div className="h-1 w-12 bg-secondary rounded-full"></div>
+              <div className="h-1 w-12 bg-primary rounded-full"></div>
+              <span className="text-primary font-semibold text-sm uppercase tracking-wider">Portfolio</span>
+              <div className="h-1 w-12 bg-primary rounded-full"></div>
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary mb-6">
               Projects & Work
             </h1>
             
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               A comprehensive showcase of BIM coordination, design management, and digital delivery projects 
               that demonstrate expertise in ISO 19650-compliant workflows and innovative solutions.
             </p>
@@ -76,7 +76,7 @@ const Projects = () => {
               {projects.map((project, index) => (
                 <Card 
                   key={index}
-                  className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border-2 hover:border-secondary/50 overflow-hidden animate-fade-in cursor-pointer"
+                  className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border-2 hover:border-primary/50 overflow-hidden animate-fade-in cursor-pointer bg-white"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {/* Thumbnail */}
@@ -91,11 +91,11 @@ const Projects = () => {
                   
                   {/* Content */}
                   <div className="p-6 space-y-3">
-                    <h3 className="text-xl font-bold text-foreground group-hover:text-accent transition-colors line-clamp-2">
+                    <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2">
                       {project.title}
                     </h3>
                     
-                    <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2">
+                    <p className="text-muted-foreground leading-relaxed line-clamp-2">
                       {project.description}
                     </p>
                   </div>
@@ -107,13 +107,13 @@ const Projects = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-primary to-primary/90">
+      <section className="py-24 bg-primary">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center text-white">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Ready to Start Your Next Project?
             </h2>
-            <p className="text-xl text-gray-200 mb-8 leading-relaxed">
+            <p className="text-xl text-white/90 mb-8 leading-relaxed">
               Let's collaborate to bring your vision to life with cutting-edge BIM solutions 
               and ISO 19650-compliant workflows.
             </p>
@@ -121,7 +121,7 @@ const Projects = () => {
               onClick={() => {
                 window.location.href = "/#contact";
               }}
-              className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-primary font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105"
+              className="inline-flex items-center gap-2 bg-white hover:bg-white/90 text-primary font-semibold px-8 py-4 rounded-lg text-lg transition-all hover:scale-105 shadow-lg"
             >
               Get in Touch
             </button>

@@ -1,53 +1,43 @@
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
-import profilePhoto from "@/assets/profile-photo.jpg";
 
 const About = () => {
   return (
     <section id="about" className="py-24 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-primary">
-            About Me
-          </h2>
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 mb-6">
+              <div className="h-1 w-12 bg-primary rounded-full"></div>
+              <span className="text-primary font-semibold text-sm uppercase tracking-wider">About</span>
+              <div className="h-1 w-12 bg-primary rounded-full"></div>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
+              About Me
+            </h2>
+          </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Text content */}
+          <div className="max-w-3xl mx-auto text-center">
             <div className="space-y-6">
-              <p className="text-lg text-foreground leading-relaxed">
-                I'm a <span className="font-semibold text-accent">BIM Expert and Design Manager</span> specializing 
+              <p className="text-xl text-foreground leading-relaxed">
+                I'm a <span className="font-semibold text-primary">BIM Expert and Design Manager</span> specializing 
                 in Building Information Modeling (BIM) implementation, modeling, coordination, and digital design delivery.
               </p>
               
-              <p className="text-lg text-foreground leading-relaxed">
+              <p className="text-xl text-foreground leading-relaxed">
                 With a strong foundation in structural design and extensive experience in BIM management, 
                 I help teams deliver innovative, efficient, and data-driven project outcomes — fully aligned 
-                with <span className="font-semibold text-accent">ISO 19650 standards</span>.
+                with <span className="font-semibold text-primary">ISO 19650 standards</span>.
               </p>
 
-              <div className="pt-4">
+              <div className="pt-8">
                 <Button 
                   size="lg"
-                  className="bg-accent hover:bg-accent/90 text-white font-semibold group"
+                  className="bg-primary hover:bg-primary/90 text-white font-semibold group shadow-lg hover:shadow-xl transition-all"
                 >
                   <Download className="mr-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
                   Download CV
                 </Button>
-              </div>
-            </div>
-
-            {/* Image */}
-            <div className="relative">
-              <div className="relative w-80 h-80 mx-auto">
-                <div className="absolute inset-0 bg-gradient-to-br from-secondary to-accent rounded-full blur-2xl opacity-20"></div>
-                <img
-                  src={profilePhoto}
-                  alt="Abdullahi Sulemuri"
-                  className="relative w-full h-full object-cover rounded-full border-8 border-background shadow-2xl"
-                />
-                
-                {/* Decorative ring */}
-                <div className="absolute inset-0 rounded-full border-4 border-secondary/30 scale-110"></div>
               </div>
             </div>
           </div>
