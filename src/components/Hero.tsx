@@ -16,9 +16,9 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 py-20 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-16 items-center justify-center">
             {/* Left side - Text content */}
-            <div className="space-y-8 animate-fade-in">
+            <div className="space-y-8 animate-fade-in order-1">
               <div className="inline-block">
                 <span className="text-primary font-semibold text-sm uppercase tracking-wider bg-primary/10 px-6 py-3 rounded-full">
                   BIM Professional
@@ -62,8 +62,8 @@ const Hero = () => {
             </div>
 
             {/* Right side - Image */}
-            <div className="relative animate-fade-in lg:justify-self-end">
-              <div className="relative w-full max-w-md">
+            <div className="relative animate-fade-in order-2 flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-md mx-auto lg:mx-0">
                 <div className="absolute inset-0 bg-primary/10 rounded-3xl blur-2xl transform rotate-3"></div>
                 <img
                   src={profileHero}
