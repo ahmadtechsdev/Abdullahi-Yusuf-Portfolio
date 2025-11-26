@@ -26,8 +26,8 @@ const Hero = () => {
               </div>
               
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-foreground">
-                I am a BIM Expert & <br />
-                <span className="text-primary">Design Manager</span>
+                Structural Engineer, <br />
+                <span className="text-primary">Design Manager & BIM Expert</span>
               </h1>
               
               <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
@@ -51,12 +51,12 @@ const Hero = () => {
                 </Button>
                 
                 <Button 
-                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  asChild
                   size="lg"
                   variant="outline"
                   className="border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all"
                 >
-                  Get in Touch
+                  <a href="mailto:abdullahiyusuf1304@gmail.com">Get in Touch</a>
                 </Button>
               </div>
             </div>

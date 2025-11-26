@@ -75,10 +75,10 @@ const Navigation = () => {
               )
             ))}
             <Button
-              onClick={() => scrollToSection("contact")}
+              asChild
               className="bg-accent hover:bg-accent/90 text-white"
             >
-              Let's Talk
+              <a href="mailto:abdullahiyusuf1304@gmail.com">Let's Talk</a>
             </Button>
           </div>
 
@@ -117,10 +117,10 @@ const Navigation = () => {
               )
             ))}
             <Button
-              onClick={() => scrollToSection("contact")}
+              asChild
               className="w-full bg-accent hover:bg-accent/90 text-white"
             >
-              Let's Talk
+              <a href="mailto:abdullahiyusuf1304@gmail.com">Let's Talk</a>
             </Button>
           </div>
         </div>
