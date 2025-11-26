@@ -2,13 +2,20 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
-import { Mail, Linkedin, MapPin, Send } from "lucide-react";
+import { Mail, Linkedin, MapPin, Phone, Send } from "lucide-react";
 import { toast } from "sonner";
 
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent! I'll get back to you soon.");
+    const formData = new FormData(e.target as HTMLFormElement);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const message = formData.get('message');
+    
+    // Open email client with pre-filled content
+    window.location.href = `mailto:abdullahiyusuf1304@gmail.com?subject=Message from ${name}&body=${encodeURIComponent(`From: ${name}\nEmail: ${email}\n\n${message}`)}`;
+    toast.success("Opening email client...");
   };
 
   return (
@@ -39,6 +46,7 @@ const Contact = () => {
                   </label>
                   <Input 
                     id="name"
+                    name="name"
                     placeholder="Your name" 
                     required
                     className="border-2 focus:border-secondary"
@@ -51,6 +59,7 @@ const Contact = () => {
                   </label>
                   <Input 
                     id="email"
+                    name="email"
                     type="email" 
                     placeholder="your.email@example.com" 
                     required
@@ -64,6 +73,7 @@ const Contact = () => {
                   </label>
                   <Textarea 
                     id="message"
+                    name="message"
                     placeholder="Tell me about your project..." 
                     required
                     rows={5}
@@ -92,10 +102,27 @@ const Contact = () => {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Email</h3>
                     <a 
-                      href="mailto:info@sulemuri.com"
+                      href="mailto:abdullahiyusuf1304@gmail.com"
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      info@sulemuri.com
+                      abdullahiyusuf1304@gmail.com
+                    </a>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-6 border-2 hover:border-primary/50 transition-colors group bg-white shadow-lg">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-all">
+                    <Phone className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">Phone</h3>
+                    <a 
+                      href="tel:+447350167943"
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                    >
+                      +44 7350 167943
                     </a>
                   </div>
                 </div>
