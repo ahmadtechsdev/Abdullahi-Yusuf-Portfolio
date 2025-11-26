@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { Download } from "lucide-react";
 
 const About = () => {
   return (
@@ -29,16 +27,6 @@ const About = () => {
                 I help teams deliver innovative, efficient, and data-driven project outcomes — fully aligned 
                 with <span className="font-semibold text-primary">ISO 19650 standards</span>.
               </p>
-
-              <div className="pt-8">
-                <Button 
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white font-semibold group shadow-lg hover:shadow-xl transition-all"
-                >
-                  <Download className="mr-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
-                  Download CV
-                </Button>
-              </div>
             </div>
           </div>
         </div>
