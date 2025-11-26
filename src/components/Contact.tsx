@@ -38,8 +38,8 @@ const Contact = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Contact Form */}
-            <Card className="p-8 border-2 bg-white shadow-lg">
-              <form onSubmit={handleSubmit} className="space-y-6">
+            <Card className="p-6 border-2 bg-white shadow-lg h-fit">
+              <form onSubmit={handleSubmit} className="space-y-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-2">
                     Name

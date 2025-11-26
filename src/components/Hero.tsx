@@ -56,7 +56,7 @@ const Hero = () => {
                   variant="outline"
                   className="border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all"
                 >
-                  <a href="mailto:abdullahiyusuf1304@gmail.com">Get in Touch</a>
+                  <a href="https://wa.me/447350167943" target="_blank" rel="noopener noreferrer">Get in Touch</a>
                 </Button>
               </div>
             </div>
