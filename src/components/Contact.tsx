@@ -38,8 +38,11 @@ const Contact = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Contact Form */}
-            <Card className="p-6 border-2 bg-white shadow-lg h-fit">
-              <form onSubmit={handleSubmit} className="space-y-4">
+            <Card className="p-8 border border-border/50 bg-card backdrop-blur-sm shadow-2xl hover:shadow-primary/10 transition-all duration-500 h-fit relative overflow-hidden">
+              {/* Subtle gradient background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent" />
+              
+              <form onSubmit={handleSubmit} className="space-y-5 relative">
                 <div>
                   <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-2">
                     Name
@@ -84,26 +87,27 @@ const Contact = () => {
                 <Button 
                   type="submit" 
                   size="lg"
-                  className="w-full bg-primary hover:bg-primary/90 text-white font-semibold group shadow-lg hover:shadow-xl transition-all"
+                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold group shadow-xl hover:shadow-2xl hover:shadow-primary/30 transition-all duration-300 hover:-translate-y-0.5"
                 >
-                  <Send className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  <Send className="mr-2 h-5 w-5 group-hover:translate-x-1 transition-transform duration-300" />
                   Send Message
                 </Button>
               </form>
             </Card>
 
             {/* Contact Details */}
-            <div className="space-y-6">
-              <Card className="p-6 border-2 hover:border-primary/50 transition-colors group bg-white shadow-lg">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-all">
-                    <Mail className="h-6 w-6 text-primary" />
+            <div className="space-y-5">
+              <Card className="p-6 border border-border/50 hover:border-primary/50 transition-all duration-500 group bg-card backdrop-blur-sm shadow-xl hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary group-hover:shadow-lg group-hover:shadow-primary/20 group-hover:scale-110 transition-all duration-500">
+                    <Mail className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-500" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Email</h3>
                     <a 
                       href="mailto:abdullahiyusuf1304@gmail.com"
-                      className="text-muted-foreground hover:text-primary transition-colors"
+                      className="text-muted-foreground hover:text-primary transition-colors duration-300"
                     >
                       abdullahiyusuf1304@gmail.com
                     </a>
@@ -111,16 +115,17 @@ const Contact = () => {
                 </div>
               </Card>
 
-              <Card className="p-6 border-2 hover:border-primary/50 transition-colors group bg-white shadow-lg">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-all">
-                    <Phone className="h-6 w-6 text-primary" />
+              <Card className="p-6 border border-border/50 hover:border-primary/50 transition-all duration-500 group bg-card backdrop-blur-sm shadow-xl hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary group-hover:shadow-lg group-hover:shadow-primary/20 group-hover:scale-110 transition-all duration-500">
+                    <Phone className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-500" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Phone</h3>
                     <a 
                       href="tel:+447350167943"
-                      className="text-muted-foreground hover:text-primary transition-colors"
+                      className="text-muted-foreground hover:text-primary transition-colors duration-300"
                     >
                       +44 7350 167943
                     </a>
@@ -128,10 +133,11 @@ const Contact = () => {
                 </div>
               </Card>
 
-              <Card className="p-6 border-2 hover:border-primary/50 transition-colors group bg-white shadow-lg">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-all">
-                    <Linkedin className="h-6 w-6 text-primary" />
+              <Card className="p-6 border border-border/50 hover:border-primary/50 transition-all duration-500 group bg-card backdrop-blur-sm shadow-xl hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary group-hover:shadow-lg group-hover:shadow-primary/20 group-hover:scale-110 transition-all duration-500">
+                    <Linkedin className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-500" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">LinkedIn</h3>
@@ -139,7 +145,7 @@ const Contact = () => {
                       href="https://linkedin.com/in/abdoolyusuf"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-primary transition-colors"
+                      className="text-muted-foreground hover:text-primary transition-colors duration-300"
                     >
                       linkedin.com/in/abdoolyusuf
                     </a>
@@ -147,10 +153,11 @@ const Contact = () => {
                 </div>
               </Card>
 
-              <Card className="p-6 border-2 hover:border-primary/50 transition-colors group bg-white shadow-lg">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-all">
-                    <MapPin className="h-6 w-6 text-primary" />
+              <Card className="p-6 border border-border/50 hover:border-primary/50 transition-all duration-500 group bg-card backdrop-blur-sm shadow-xl hover:shadow-2xl hover:-translate-y-1 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative flex items-start gap-4">
+                  <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary group-hover:shadow-lg group-hover:shadow-primary/20 group-hover:scale-110 transition-all duration-500">
+                    <MapPin className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-500" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Location</h3>
@@ -160,12 +167,13 @@ const Contact = () => {
               </Card>
 
               {/* Quote Card */}
-              <Card className="p-8 bg-primary border-0 shadow-xl">
-                <blockquote className="text-white">
+              <Card className="p-8 bg-primary border-0 shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:scale-[1.02] relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent" />
+                <blockquote className="relative text-primary-foreground">
                   <p className="text-lg font-medium mb-3 leading-relaxed">
                     "Let's collaborate to bring your vision to life with cutting-edge BIM solutions."
                   </p>
-                  <footer className="text-white/90 font-semibold">
+                  <footer className="text-primary-foreground/90 font-semibold">
                     — Abdullahi Sulemuri
                   </footer>
                 </blockquote>
