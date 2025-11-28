@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             {/* Branding */}
             <div>
-              <h3 className="text-2xl font-bold mb-2">Abdullahi Sulemuri</h3>
+              <h3 className="text-2xl font-bold mb-2">Abdullahi Yusuf</h3>
               <p className="text-gray-300">Structural Engineer, Design Manager & BIM Expert</p>
               <p className="text-sm text-gray-400 mt-2">
                 ISO 19650-compliant project management and digital design delivery
@@ -57,7 +57,7 @@ const Footer = () => {
 
           <div className="border-t border-white/10 pt-8 text-center">
             <p className="text-gray-400 text-sm">
-              © 2025 Abdullahi Sulemuri. All rights reserved.
+              © 2025 Abdullahi Yusuf. All rights reserved.
             </p>
           </div>
         </div>

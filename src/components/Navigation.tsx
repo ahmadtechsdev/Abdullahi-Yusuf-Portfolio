@@ -48,7 +48,7 @@ const Navigation = () => {
             to="/"
             className="text-2xl font-bold text-primary hover:text-accent transition-colors"
           >
-            AS
+            AY
           </Link>
 
           {/* Desktop Navigation */}
