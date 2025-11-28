@@ -67,7 +67,7 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-primary/10 rounded-3xl blur-2xl transform rotate-3"></div>
                 <img
                   src={profileHero}
-                  alt="Abdullahi Sulemuri - BIM Expert & Design Manager"
+                  alt="Abdullahi Yusuf - BIM Expert & Design Manager"
                   className="relative rounded-3xl shadow-2xl w-full object-cover aspect-[3/4] border-4 border-white/50"
                 />
                 

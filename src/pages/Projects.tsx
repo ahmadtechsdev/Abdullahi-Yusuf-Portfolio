@@ -19,7 +19,7 @@ const projects: Project[] = [
   { youtubeUrl: "https://youtu.be/H_xJy2FfW3U", title: "Bwari Toll Plaza", category: "design" },
   { youtubeUrl: "https://youtu.be/nIE4wR-A0NU", title: "Maraba Toll Plaza", category: "design" },
   { youtubeUrl: "https://youtu.be/nazjOMm4-fA", title: "Abuja Railway Security System", category: "design" },
-  { youtubeUrl: "https://www.youtube.com/watch?v=KGuDdSmd9d0", title: "Proposed Military City & Azza Residential City, Sudan", category: "design" },
+  { youtubeUrl: "https://youtu.be/9wSF_ZCHnDA", title: "Proposed Military City & Azza Residential City, Sudan", category: "design" },
   // BIM Projects
   { youtubeUrl: "https://www.youtube.com/watch?v=KGuDdSmd9d0", title: "Proposed Military City & Azza Residential City, Sudan", category: "bim" },
 ];
