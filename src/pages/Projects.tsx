@@ -3,13 +3,34 @@ import Footer from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { useState } from "react";
-import { Play } from "lucide-react";
+import { Play, Image as ImageIcon } from "lucide-react";
+
+// Import BIM project images
+import project2Img1 from "@/assets/projects/bim/project-2/image-1.jpg";
+import project2Img2 from "@/assets/projects/bim/project-2/image-2.jpg";
+import project2Img3 from "@/assets/projects/bim/project-2/image-3.jpg";
+import project2Img4 from "@/assets/projects/bim/project-2/image-4.jpg";
+import project2Img5 from "@/assets/projects/bim/project-2/image-5.jpg";
+import project2Img6 from "@/assets/projects/bim/project-2/image-6.jpg";
+import project2Img7 from "@/assets/projects/bim/project-2/image-7.jpg";
+
+import project3Img1 from "@/assets/projects/bim/project-3/image-1.jpg";
+import project3Img2 from "@/assets/projects/bim/project-3/image-2.jpg";
+import project3Img3 from "@/assets/projects/bim/project-3/image-3.jpg";
+import project3Img4 from "@/assets/projects/bim/project-3/image-4.jpg";
+import project3Img5 from "@/assets/projects/bim/project-3/image-5.jpg";
+import project3Img6 from "@/assets/projects/bim/project-3/image-6.jpg";
+import project3Img7 from "@/assets/projects/bim/project-3/image-7.jpg";
+import project3Img8 from "@/assets/projects/bim/project-3/image-8.jpg";
+import project3Img9 from "@/assets/projects/bim/project-3/image-9.jpg";
 
 interface Project {
-  youtubeUrl: string;
   title: string;
   category: "design" | "bim" | "structural";
+  youtubeUrl?: string;
+  images?: string[];
 }
 
 const projects: Project[] = [
@@ -21,7 +42,17 @@ const projects: Project[] = [
   { youtubeUrl: "https://youtu.be/nazjOMm4-fA", title: "Abuja Railway Security System", category: "design" },
   { youtubeUrl: "https://youtu.be/9wSF_ZCHnDA", title: "Proposed Military City & Azza Residential City, Sudan", category: "design" },
   // BIM Projects
-  { youtubeUrl: "https://www.youtube.com/watch?v=KGuDdSmd9d0", title: "Proposed Military City & Azza Residential City, Sudan", category: "bim" },
+  { youtubeUrl: "https://youtu.be/9wSF_ZCHnDA", title: "Proposed Military City & Azza Residential City, Sudan", category: "bim" },
+  { 
+    title: "Proposed Shopping Mall Development", 
+    category: "bim",
+    images: [project2Img1, project2Img2, project2Img3, project2Img4, project2Img5, project2Img6, project2Img7]
+  },
+  { 
+    title: "Proposed Serviced Apartments Development", 
+    category: "bim",
+    images: [project3Img1, project3Img2, project3Img3, project3Img4, project3Img5, project3Img6, project3Img7, project3Img8, project3Img9]
+  },
 ];
 
 const getYouTubeVideoId = (url: string): string => {
@@ -50,22 +81,23 @@ const getYouTubeEmbedUrl = (url: string): string => {
 const Projects = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const [selectedTitle, setSelectedTitle] = useState<string>("");
+  const [selectedImages, setSelectedImages] = useState<string[] | null>(null);
 
   const designProjects = projects.filter(p => p.category === "design");
   const bimProjects = projects.filter(p => p.category === "bim");
   const structuralProjects = projects.filter(p => p.category === "structural");
 
-  const ProjectCard = ({ project }: { project: Project }) => (
+  const VideoProjectCard = ({ project }: { project: Project }) => (
     <Card 
       className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50 hover:border-primary overflow-hidden cursor-pointer bg-card backdrop-blur-sm"
       onClick={() => {
-        setSelectedVideo(project.youtubeUrl);
+        setSelectedVideo(project.youtubeUrl!);
         setSelectedTitle(project.title);
       }}
     >
       <div className="relative overflow-hidden aspect-video bg-muted">
         <img
-          src={getYouTubeThumbnail(project.youtubeUrl)}
+          src={getYouTubeThumbnail(project.youtubeUrl!)}
           alt={project.title}
           className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-75"
         />
@@ -86,6 +118,45 @@ const Projects = () => {
       </div>
     </Card>
   );
+
+  const ImageProjectCard = ({ project }: { project: Project }) => (
+    <Card 
+      className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50 hover:border-primary overflow-hidden cursor-pointer bg-card backdrop-blur-sm"
+      onClick={() => {
+        setSelectedImages(project.images!);
+        setSelectedTitle(project.title);
+      }}
+    >
+      <div className="relative overflow-hidden aspect-video bg-muted">
+        <img
+          src={project.images![0]}
+          alt={project.title}
+          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-75"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+          <div className="bg-primary text-primary-foreground rounded-full p-5 transform scale-0 group-hover:scale-100 transition-transform duration-500 shadow-2xl">
+            <ImageIcon className="w-10 h-10" />
+          </div>
+        </div>
+        <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-semibold text-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          View Gallery
+        </div>
+      </div>
+      
+      <div className="p-6 bg-gradient-to-b from-card to-card/50">
+        <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2 leading-tight">
+          {project.title}
+        </h3>
+      </div>
+    </Card>
+  );
+
+  const ProjectCard = ({ project }: { project: Project }) => {
+    if (project.images) {
+      return <ImageProjectCard project={project} />;
+    }
+    return <VideoProjectCard project={project} />;
+  };
 
   const EmptyState = () => (
     <div className="text-center py-16">
@@ -226,6 +297,33 @@ const Projects = () => {
                 className="w-full h-full"
               />
             </div>
+          )}
+        </DialogContent>
+      </Dialog>
+
+      {/* Image Gallery Modal */}
+      <Dialog open={selectedImages !== null} onOpenChange={() => setSelectedImages(null)}>
+        <DialogContent className="max-w-7xl w-full p-8 border-none shadow-2xl">
+          <DialogTitle className="text-2xl font-bold mb-6 text-center">{selectedTitle}</DialogTitle>
+          {selectedImages && (
+            <Carousel className="w-full">
+              <CarouselContent>
+                {selectedImages.map((image, index) => (
+                  <CarouselItem key={index}>
+                    <div className="flex items-center justify-center bg-muted rounded-lg overflow-hidden">
+                      <img
+                        src={image}
+                        alt={`${selectedTitle} - Image ${index + 1}`}
+                        className="w-full h-auto max-h-[70vh] object-contain"
+                        onContextMenu={(e) => e.preventDefault()}
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="left-4" />
+              <CarouselNext className="right-4" />
+            </Carousel>
           )}
         </DialogContent>
       </Dialog>
