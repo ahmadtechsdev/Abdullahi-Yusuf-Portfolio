@@ -1,14 +1,17 @@
-import { Building2, Boxes, FileCheck2, Ruler, Wrench, Pen, Compass, Search, BookCheck, Users, Workflow } from "lucide-react";
+import { Building2, Boxes, FileCheck2, Ruler, Search, BookCheck, Users, Workflow } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import revitIcon from "@/assets/icons/revit.png";
+import autocadIcon from "@/assets/icons/autocad.png";
+import navisworksIcon from "@/assets/icons/navisworks.png";
 
 const skills = [
   { icon: Building2, title: "BIM Modeling, Management & Coordination" },
   { icon: Boxes, title: "BIM AR & VR Implementation" },
   { icon: FileCheck2, title: "Design Management & Digital Delivery" },
   { icon: Ruler, title: "Structural Design & Technical Oversight" },
-  { icon: Wrench, title: "Revit" },
-  { icon: Pen, title: "AutoCAD" },
-  { icon: Compass, title: "Navisworks" },
+  { imageSrc: revitIcon, title: "Revit" },
+  { imageSrc: autocadIcon, title: "AutoCAD" },
+  { imageSrc: navisworksIcon, title: "Navisworks" },
   { icon: BookCheck, title: "ISO 19650 Implementation" },
   { icon: Search, title: "Clash Detection & Model Validation" },
   { icon: FileCheck2, title: "Information Management & QA/QC" },
@@ -37,7 +40,9 @@ const Skills = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {skills.map((skill, index) => {
-              const Icon = skill.icon;
+              const Icon = 'icon' in skill ? skill.icon : null;
+              const imageSrc = 'imageSrc' in skill ? skill.imageSrc : null;
+              
               return (
                 <Card
                   key={index}
@@ -48,7 +53,8 @@ const Skills = () => {
                   
                   <div className="relative flex items-start gap-4">
                     <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary group-hover:shadow-lg group-hover:shadow-primary/20 group-hover:scale-110 transition-all duration-500">
-                      <Icon className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-500" />
+                      {Icon && <Icon className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-500" />}
+                      {imageSrc && <img src={imageSrc} alt={skill.title} className="h-6 w-6 object-contain brightness-0 group-hover:brightness-100 transition-all duration-500" />}
                     </div>
                     <h3 className="text-base font-semibold text-foreground leading-tight pt-2 group-hover:text-primary transition-colors duration-300">
                       {skill.title}
