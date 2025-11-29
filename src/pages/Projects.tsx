@@ -60,6 +60,7 @@ interface Project {
   category: "design" | "bim" | "structural";
   youtubeUrl?: string;
   images?: string[];
+  pdfFileId?: string;
 }
 
 const projects: Project[] = [
@@ -97,6 +98,17 @@ const projects: Project[] = [
     category: "bim",
     images: [project6Img1, project6Img2, project6Img3, project6Img4, project6Img5, project6Img6, project6Img7]
   },
+  // Structural Engineering Projects
+  { title: "Structural Engineering Project 1", category: "structural", pdfFileId: "1TCNkRGTvnfJU5KESQNb-YzzPqhLcQlhG" },
+  { title: "Structural Engineering Project 2", category: "structural", pdfFileId: "1rpNpxmfrysYZ5TqjJzigXaClksLfCDXo" },
+  { title: "Structural Engineering Project 3", category: "structural", pdfFileId: "1fPFUjQCrYB1V2X96hfSUlg9QB_djibkd" },
+  { title: "Structural Engineering Project 4", category: "structural", pdfFileId: "1bnIF9DCkB35XjFC6i1JUKAWSPTb68EMW" },
+  { title: "Structural Engineering Project 5", category: "structural", pdfFileId: "1bFUbDyBklxCQngkcM-T2srdoeYjCSFlx" },
+  { title: "Structural Engineering Project 6", category: "structural", pdfFileId: "1beco7cvARwTVMb72ilLbNvlMx13aRHzZ" },
+  { title: "Structural Engineering Project 7", category: "structural", pdfFileId: "1dMZPZaATBRzmXqzfdoSlSYTHA9CwA0iQ" },
+  { title: "Structural Engineering Project 8", category: "structural", pdfFileId: "1MnqDfptNmajRpU0gHbHpN39YUy0sKhTc" },
+  { title: "Structural Engineering Project 9", category: "structural", pdfFileId: "1rX5lZPiJxyz0vwQxSAEgR_lP2cqDWrVT" },
+  { title: "Structural Engineering Project 10", category: "structural", pdfFileId: "1c6QFphtoFHw_u4hJEc75qWWcx31uI1ut" },
 ];
 
 const getYouTubeVideoId = (url: string): string => {
@@ -126,6 +138,7 @@ const Projects = () => {
   const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
   const [selectedTitle, setSelectedTitle] = useState<string>("");
   const [selectedImages, setSelectedImages] = useState<string[] | null>(null);
+  const [selectedPdf, setSelectedPdf] = useState<string | null>(null);
 
   const designProjects = projects.filter(p => p.category === "design");
   const bimProjects = projects.filter(p => p.category === "bim");
@@ -198,9 +211,44 @@ const Projects = () => {
     </Card>
   );
 
+  const PdfProjectCard = ({ project }: { project: Project }) => (
+    <Card 
+      className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50 hover:border-primary overflow-hidden cursor-pointer bg-card backdrop-blur-sm"
+      onClick={() => {
+        setSelectedPdf(project.pdfFileId!);
+        setSelectedTitle(project.title);
+      }}
+    >
+      <div className="relative overflow-hidden aspect-video bg-muted">
+        <img
+          src={`https://drive.google.com/thumbnail?id=${project.pdfFileId}`}
+          alt={project.title}
+          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-75"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
+          <div className="bg-primary text-primary-foreground rounded-full p-5 transform scale-0 group-hover:scale-100 transition-transform duration-500 shadow-2xl">
+            <ImageIcon className="w-10 h-10" />
+          </div>
+        </div>
+        <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-semibold text-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          View Document
+        </div>
+      </div>
+      
+      <div className="p-6 bg-gradient-to-b from-card to-card/50">
+        <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2 leading-tight">
+          {project.title}
+        </h3>
+      </div>
+    </Card>
+  );
+
   const ProjectCard = ({ project }: { project: Project }) => {
     if (project.images) {
       return <ImageProjectCard project={project} />;
+    }
+    if (project.pdfFileId) {
+      return <PdfProjectCard project={project} />;
     }
     return <VideoProjectCard project={project} />;
   };
@@ -371,6 +419,21 @@ const Projects = () => {
               <CarouselPrevious className="left-4" />
               <CarouselNext className="right-4" />
             </Carousel>
+          )}
+        </DialogContent>
+      </Dialog>
+
+      {/* PDF Preview Modal */}
+      <Dialog open={selectedPdf !== null} onOpenChange={() => setSelectedPdf(null)}>
+        <DialogContent className="max-w-7xl w-full h-[90vh] p-0 overflow-hidden border-none shadow-2xl">
+          <DialogTitle className="sr-only">{selectedTitle}</DialogTitle>
+          {selectedPdf && (
+            <iframe
+              src={`https://drive.google.com/file/d/${selectedPdf}/preview`}
+              className="w-full h-full"
+              title={selectedTitle}
+              allow="autoplay"
+            />
           )}
         </DialogContent>
       </Dialog>
