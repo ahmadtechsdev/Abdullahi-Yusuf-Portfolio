@@ -109,6 +109,21 @@ const projects: Project[] = [
   { title: "Structural Engineering Project 8", category: "structural", pdfFileId: "1MnqDfptNmajRpU0gHbHpN39YUy0sKhTc" },
   { title: "Structural Engineering Project 9", category: "structural", pdfFileId: "1rX5lZPiJxyz0vwQxSAEgR_lP2cqDWrVT" },
   { title: "Structural Engineering Project 10", category: "structural", pdfFileId: "1c6QFphtoFHw_u4hJEc75qWWcx31uI1ut" },
+  { title: "Structural Engineering Project 11", category: "structural", pdfFileId: "1ggbDTHDUU0hGU4Qq9yq5GEwKl53L8R5h" },
+  { title: "Structural Engineering Project 12", category: "structural", pdfFileId: "1rlWWH71Y5tCy_iCrziGImI4oWkRrGgO5" },
+  { title: "Structural Engineering Project 13", category: "structural", pdfFileId: "1rUg26NpDCgaRRS-DFMC03PREIIS4IURK" },
+  { title: "Structural Engineering Project 14", category: "structural", pdfFileId: "1TyKW5UGrfu3L78f5SIwt6SvQmzVOn1ka" },
+  { title: "Structural Engineering Project 15", category: "structural", pdfFileId: "1GycgUyqyc0m1ZPFyu87rc3Q1QOnj_RfL" },
+  { title: "Structural Engineering Project 16", category: "structural", pdfFileId: "1UABr3pdGHYQr2yqoFND6t4lh14W-zLbG" },
+  { title: "Structural Engineering Project 17", category: "structural", pdfFileId: "1Gsk5NtAwd7KP-1wlHCDPyOmeklkMthbg" },
+  { title: "Structural Engineering Project 18", category: "structural", pdfFileId: "1SMBIVds22PRVsNwBvk61XN18ZJZbfYh-" },
+  { title: "Structural Engineering Project 19", category: "structural", pdfFileId: "1FhV8i9L3v5hrRkQVRsD6G93yaJnG5n8f" },
+  { title: "Structural Engineering Project 20", category: "structural", pdfFileId: "1Q6LbOlyNYMYEZ07potJLF8JZlKEufsbv" },
+  { title: "Structural Engineering Project 21", category: "structural", pdfFileId: "1kRqz6oOSbMC3jQgu3tj68xoqP_-UKt2h" },
+  { title: "Structural Engineering Project 22", category: "structural", pdfFileId: "1cY2r2Rc2USHA5GKC74Idkl4tPgGjMwnA" },
+  { title: "Structural Engineering Project 23", category: "structural", pdfFileId: "1w8xv7yR0pMtCi6wi1DpbJ_iWbhQnSdAv" },
+  { title: "Structural Engineering Project 24", category: "structural", pdfFileId: "1Tja6zLUWccjT1pt1XeojkYu5OmaVclnZ" },
+  { title: "Structural Engineering Project 25", category: "structural", pdfFileId: "1tv4ZIiNyX4hLqmP4XAZzcordPbYO_Z2J" },
 ];
 
 const getYouTubeVideoId = (url: string): string => {
