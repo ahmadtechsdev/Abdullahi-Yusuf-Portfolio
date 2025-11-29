@@ -26,6 +26,35 @@ import project3Img7 from "@/assets/projects/bim/project-3/image-7.jpg";
 import project3Img8 from "@/assets/projects/bim/project-3/image-8.jpg";
 import project3Img9 from "@/assets/projects/bim/project-3/image-9.jpg";
 
+import project4Img1 from "@/assets/projects/bim/project-4/image-1.jpg";
+import project4Img2 from "@/assets/projects/bim/project-4/image-2.jpg";
+import project4Img3 from "@/assets/projects/bim/project-4/image-3.jpg";
+import project4Img4 from "@/assets/projects/bim/project-4/image-4.jpg";
+import project4Img5 from "@/assets/projects/bim/project-4/image-5.jpg";
+import project4Img6 from "@/assets/projects/bim/project-4/image-6.jpg";
+import project4Img7 from "@/assets/projects/bim/project-4/image-7.jpg";
+import project4Img8 from "@/assets/projects/bim/project-4/image-8.jpg";
+import project4Img9 from "@/assets/projects/bim/project-4/image-9.jpg";
+import project4Img10 from "@/assets/projects/bim/project-4/image-10.jpg";
+import project4Img11 from "@/assets/projects/bim/project-4/image-11.jpg";
+
+import project5Img1 from "@/assets/projects/bim/project-5/image-1.jpg";
+import project5Img2 from "@/assets/projects/bim/project-5/image-2.jpg";
+import project5Img3 from "@/assets/projects/bim/project-5/image-3.jpg";
+import project5Img4 from "@/assets/projects/bim/project-5/image-4.jpg";
+import project5Img5 from "@/assets/projects/bim/project-5/image-5.jpg";
+import project5Img6 from "@/assets/projects/bim/project-5/image-6.jpg";
+import project5Img7 from "@/assets/projects/bim/project-5/image-7.jpg";
+import project5Img8 from "@/assets/projects/bim/project-5/image-8.jpg";
+
+import project6Img1 from "@/assets/projects/bim/project-6/image-1.jpg";
+import project6Img2 from "@/assets/projects/bim/project-6/image-2.jpg";
+import project6Img3 from "@/assets/projects/bim/project-6/image-3.jpg";
+import project6Img4 from "@/assets/projects/bim/project-6/image-4.jpg";
+import project6Img5 from "@/assets/projects/bim/project-6/image-5.jpg";
+import project6Img6 from "@/assets/projects/bim/project-6/image-6.jpg";
+import project6Img7 from "@/assets/projects/bim/project-6/image-7.jpg";
+
 interface Project {
   title: string;
   category: "design" | "bim" | "structural";
@@ -52,6 +81,21 @@ const projects: Project[] = [
     title: "Proposed Serviced Apartments Development", 
     category: "bim",
     images: [project3Img1, project3Img2, project3Img3, project3Img4, project3Img5, project3Img6, project3Img7, project3Img8, project3Img9]
+  },
+  { 
+    title: "Proposed Commercial Development", 
+    category: "bim",
+    images: [project4Img1, project4Img2, project4Img3, project4Img4, project4Img5, project4Img6, project4Img7, project4Img8, project4Img9, project4Img10, project4Img11]
+  },
+  { 
+    title: "Proposed Residential Development", 
+    category: "bim",
+    images: [project5Img1, project5Img2, project5Img3, project5Img4, project5Img5, project5Img6, project5Img7, project5Img8]
+  },
+  { 
+    title: "Proposed Commercial Development", 
+    category: "bim",
+    images: [project6Img1, project6Img2, project6Img3, project6Img4, project6Img5, project6Img6, project6Img7]
   },
 ];
 
@@ -137,6 +181,9 @@ const Projects = () => {
           <div className="bg-primary text-primary-foreground rounded-full p-5 transform scale-0 group-hover:scale-100 transition-transform duration-500 shadow-2xl">
             <ImageIcon className="w-10 h-10" />
           </div>
+        </div>
+        <div className="absolute top-4 left-4 bg-primary text-primary-foreground backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-semibold shadow-lg">
+          BIM Coordinator
         </div>
         <div className="absolute top-4 right-4 bg-background/90 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs font-semibold text-foreground opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           View Gallery
