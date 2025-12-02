@@ -3,15 +3,19 @@ import { Card } from "@/components/ui/card";
 import revitIcon from "@/assets/icons/revit.png";
 import autocadIcon from "@/assets/icons/autocad.png";
 import navisworksIcon from "@/assets/icons/navisworks.png";
+import teklaIcon from "@/assets/icons/tekla.png";
+import robotIcon from "@/assets/icons/robot.png";
 
 const skills = [
+  { imageSrc: revitIcon, title: "Revit" },
+  { imageSrc: autocadIcon, title: "AutoCAD" },
+  { imageSrc: navisworksIcon, title: "Navisworks" },
+  { imageSrc: teklaIcon, title: "Tekla" },
+  { imageSrc: robotIcon, title: "Autodesk Robot" },
   { icon: Building2, title: "BIM Modeling, Management & Coordination" },
   { icon: Boxes, title: "BIM AR & VR Implementation" },
   { icon: FileCheck2, title: "Design Management & Digital Delivery" },
   { icon: Ruler, title: "Structural Design & Technical Oversight" },
-  { imageSrc: revitIcon, title: "Revit" },
-  { imageSrc: autocadIcon, title: "AutoCAD" },
-  { imageSrc: navisworksIcon, title: "Navisworks" },
   { icon: BookCheck, title: "ISO 19650 Implementation" },
   { icon: Search, title: "Clash Detection & Model Validation" },
   { icon: FileCheck2, title: "Information Management & QA/QC" },

@@ -174,7 +174,7 @@ const Contact = () => {
                     "Let's collaborate to bring your vision to life with cutting-edge BIM solutions."
                   </p>
                   <footer className="text-primary-foreground/90 font-semibold">
-                    — Abdullahi Sulemuri
+                    — Abdullahi Yusuf
                   </footer>
                 </blockquote>
               </Card>
