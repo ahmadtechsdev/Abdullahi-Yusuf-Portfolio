@@ -58,7 +58,7 @@ const Skills = () => {
                   <div className="relative flex items-start gap-4">
                     <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary group-hover:shadow-lg group-hover:shadow-primary/20 group-hover:scale-110 transition-all duration-500">
                       {Icon && <Icon className="h-6 w-6 text-primary group-hover:text-primary-foreground transition-colors duration-500" />}
-                      {imageSrc && <img src={imageSrc} alt={skill.title} className="h-6 w-6 object-contain brightness-0 group-hover:brightness-100 transition-all duration-500" />}
+                      {imageSrc && <img src={imageSrc} alt={skill.title} className="h-6 w-6 object-contain group-hover:opacity-0 transition-all duration-500" />}
                     </div>
                     <h3 className="text-base font-semibold text-foreground leading-tight pt-2 group-hover:text-primary transition-colors duration-300">
                       {skill.title}
