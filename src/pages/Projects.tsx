@@ -309,8 +309,7 @@ const Projects = () => {
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              A comprehensive showcase of BIM coordination, design management, and digital delivery projects 
-              that demonstrate expertise in ISO 19650-compliant workflows and innovative solutions.
+              A comprehensive showcase of structural design projects, BIM coordination, design management, and digital delivery projects that demonstrate expertise in ISO 19650-compliant workflows and innovative solutions.
             </p>
           </div>
         </div>
@@ -320,14 +319,14 @@ const Projects = () => {
       <section className="py-24 bg-gradient-to-b from-muted/20 to-background">
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
-            <Tabs defaultValue="design" className="w-full">
+            <Tabs defaultValue="structural" className="w-full">
               <div className="flex justify-center mb-16">
                 <TabsList className="inline-flex h-14 items-center justify-center rounded-xl bg-muted/50 backdrop-blur-sm p-1.5 text-muted-foreground border border-border/50 shadow-lg">
                   <TabsTrigger 
-                    value="design" 
+                    value="structural"
                     className="rounded-lg px-6 py-2.5 text-sm font-semibold transition-all data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md hover:text-foreground"
                   >
-                    Design Project
+                    Structural Projects
                   </TabsTrigger>
                   <TabsTrigger 
                     value="bim"
@@ -336,10 +335,10 @@ const Projects = () => {
                     BIM
                   </TabsTrigger>
                   <TabsTrigger 
-                    value="structural"
+                    value="design" 
                     className="rounded-lg px-6 py-2.5 text-sm font-semibold transition-all data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md hover:text-foreground"
                   >
-                    Structural Engineering
+                    Design Projects
                   </TabsTrigger>
                 </TabsList>
               </div>
