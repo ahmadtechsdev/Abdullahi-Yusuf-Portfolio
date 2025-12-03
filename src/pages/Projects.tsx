@@ -55,6 +55,9 @@ import project6Img5 from "@/assets/projects/bim/project-6/image-5.jpg";
 import project6Img6 from "@/assets/projects/bim/project-6/image-6.jpg";
 import project6Img7 from "@/assets/projects/bim/project-6/image-7.jpg";
 
+import nnamdiAirportThumb from "@/assets/projects/canva/nnamdi-airport-slide1.png";
+import mallamAirportThumb from "@/assets/projects/canva/mallam-airport-slide1.png";
+
 interface Project {
   title: string;
   category: "design" | "bim" | "structural";
@@ -62,6 +65,7 @@ interface Project {
   images?: string[];
   pdfFileId?: string;
   externalUrl?: string;
+  thumbnail?: string;
 }
 
 const projects: Project[] = [
@@ -73,12 +77,14 @@ const projects: Project[] = [
       "https://www.canva.com/design/DAG2JTL5Sgs/x-pwEbVFAtI2cM7BKNPcSw/view?utm_content=DAG2JTL5Sgs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he554a22377#23",
     title: "Nnamdi Azikwe International Airport Modern Parking & Ticketing System",
     category: "design",
+    thumbnail: nnamdiAirportThumb,
   },
   {
     externalUrl:
       "https://www.canva.com/design/DAG2Jb33CR0/aE099H7XbvzkYuj-K_C1rw/view?utm_content=DAG2Jb33CR0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6cdbb94fbd",
     title: "Mallam Aminu Kano International Airport Modern Parking & Ticketing System",
     category: "design",
+    thumbnail: mallamAirportThumb,
   },
   { youtubeUrl: "https://youtu.be/H_xJy2FfW3U", title: "Bwari Toll Plaza", category: "design" },
   { youtubeUrl: "https://youtu.be/nIE4wR-A0NU", title: "Maraba Toll Plaza", category: "design" },
@@ -108,12 +114,14 @@ const projects: Project[] = [
       "https://www.canva.com/design/DAG2JTL5Sgs/x-pwEbVFAtI2cM7BKNPcSw/view?utm_content=DAG2JTL5Sgs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he554a22377#23",
     title: "Nnamdi Azikwe International Airport Modern Parking & Ticketing System",
     category: "bim",
+    thumbnail: nnamdiAirportThumb,
   },
   {
     externalUrl:
       "https://www.canva.com/design/DAG2Jb33CR0/aE099H7XbvzkYuj-K_C1rw/view?utm_content=DAG2Jb33CR0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6cdbb94fbd",
     title: "Mallam Aminu Kano International Airport Modern Parking & Ticketing System",
     category: "bim",
+    thumbnail: mallamAirportThumb,
   },
   {
     title: "Proposed Serviced Apartments Development",
@@ -359,12 +367,22 @@ const Projects = () => {
         }
       }}
     >
-      <div className="relative overflow-hidden aspect-video bg-gradient-to-br from-primary/20 via-primary/10 to-background">
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+      <div className="relative overflow-hidden aspect-video bg-muted">
+        {project.thumbnail ? (
+          <img
+            src={project.thumbnail}
+            alt={project.title}
+            className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:brightness-75"
+          />
+        ) : (
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-background" />
+        )}
+
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 bg-black/20 group-hover:bg-black/30 transition-colors duration-500">
           <div className="bg-primary text-primary-foreground rounded-full p-5 transform group-hover:scale-110 transition-transform duration-500 shadow-2xl">
             <Play className="w-10 h-10" fill="currentColor" />
           </div>
-          <p className="text-sm font-medium text-foreground/80 group-hover:text-primary transition-colors">
+          <p className="text-sm font-medium text-foreground/90 group-hover:text-primary-foreground transition-colors text-center px-4">
             Open Interactive Presentation
           </p>
         </div>
