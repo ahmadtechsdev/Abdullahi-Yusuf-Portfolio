@@ -18,14 +18,19 @@ const About = () => {
           <div className="max-w-3xl mx-auto text-center">
             <div className="space-y-6">
               <p className="text-xl text-foreground leading-relaxed">
-                I'm a <span className="font-semibold text-primary">BIM Expert and Design Manager</span> specializing 
-                in Building Information Modeling (BIM) implementation, modeling, coordination, and digital design delivery.
+                I'm a{" "}
+                <span className="font-semibold text-primary">
+                  Structural Engineer, BIM Expert and Design Manager
+                </span>{" "}
+                specializing in Building Information Modeling (BIM) implementation,
+                modeling, coordination, and digital design delivery.
               </p>
               
               <p className="text-xl text-foreground leading-relaxed">
-                With a strong foundation in structural design and extensive experience in BIM management, 
-                I help teams deliver innovative, efficient, and data-driven project outcomes — fully aligned 
-                with <span className="font-semibold text-primary">ISO 19650 standards</span>.
+                With a strong foundation in structural design and extensive experience in BIM
+                management, I help teams deliver innovative, efficient, and data-driven
+                project outcomes — fully aligned with{" "}
+                <span className="font-semibold text-primary">ISO 19650 standards</span>.
               </p>
             </div>
           </div>
