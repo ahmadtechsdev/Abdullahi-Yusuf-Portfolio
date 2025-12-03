@@ -61,47 +61,123 @@ interface Project {
   youtubeUrl?: string;
   images?: string[];
   pdfFileId?: string;
+  externalUrl?: string;
 }
 
 const projects: Project[] = [
   // Design Projects
   { youtubeUrl: "https://youtu.be/l--lH3m8FpI", title: "Gwagwalada Toll Gate", category: "design" },
   { youtubeUrl: "https://youtu.be/i362rQaY9eQ", title: "Madala Toll Plaza", category: "design" },
+  {
+    externalUrl:
+      "https://www.canva.com/design/DAG2JTL5Sgs/x-pwEbVFAtI2cM7BKNPcSw/view?utm_content=DAG2JTL5Sgs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he554a22377#23",
+    title: "Nnamdi Azikwe International Airport Modern Parking & Ticketing System",
+    category: "design",
+  },
+  {
+    externalUrl:
+      "https://www.canva.com/design/DAG2Jb33CR0/aE099H7XbvzkYuj-K_C1rw/view?utm_content=DAG2Jb33CR0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6cdbb94fbd",
+    title: "Mallam Aminu Kano International Airport Modern Parking & Ticketing System",
+    category: "design",
+  },
   { youtubeUrl: "https://youtu.be/H_xJy2FfW3U", title: "Bwari Toll Plaza", category: "design" },
   { youtubeUrl: "https://youtu.be/nIE4wR-A0NU", title: "Maraba Toll Plaza", category: "design" },
-  { youtubeUrl: "https://youtu.be/nazjOMm4-fA", title: "Abuja Railway Security System", category: "design" },
-  { youtubeUrl: "https://youtu.be/9wSF_ZCHnDA", title: "Proposed Military City & Azza Residential City, Sudan", category: "design" },
+  {
+    youtubeUrl: "https://youtu.be/nazjOMm4-fA",
+    title: "Abuja Railway Security System",
+    category: "design",
+  },
+  {
+    youtubeUrl: "https://youtu.be/9wSF_ZCHnDA",
+    title: "Proposed Military City & Azza Residential City, Sudan",
+    category: "design",
+  },
   // BIM Projects
-  { youtubeUrl: "https://youtu.be/9wSF_ZCHnDA", title: "Proposed Military City & Azza Residential City, Sudan", category: "bim" },
-  { 
-    title: "Proposed Shopping Mall Development", 
+  {
+    youtubeUrl: "https://youtu.be/9wSF_ZCHnDA",
+    title: "Proposed Military City & Azza Residential City, Sudan",
     category: "bim",
-    images: [project2Img1, project2Img2, project2Img3, project2Img4, project2Img5, project2Img6, project2Img7]
   },
-  { 
-    title: "Proposed Serviced Apartments Development", 
+  {
+    title: "Proposed Shopping Mall Development",
     category: "bim",
-    images: [project3Img1, project3Img2, project3Img3, project3Img4, project3Img5, project3Img6, project3Img7, project3Img8, project3Img9]
+    images: [project2Img1, project2Img2, project2Img3, project2Img4, project2Img5, project2Img6, project2Img7],
   },
-  { 
-    title: "Proposed Commercial Development", 
+  {
+    externalUrl:
+      "https://www.canva.com/design/DAG2JTL5Sgs/x-pwEbVFAtI2cM7BKNPcSw/view?utm_content=DAG2JTL5Sgs&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he554a22377#23",
+    title: "Nnamdi Azikwe International Airport Modern Parking & Ticketing System",
     category: "bim",
-    images: [project4Img1, project4Img2, project4Img3, project4Img4, project4Img5, project4Img6, project4Img7, project4Img8, project4Img9, project4Img10, project4Img11]
   },
-  { 
-    title: "Proposed Residential Development", 
+  {
+    externalUrl:
+      "https://www.canva.com/design/DAG2Jb33CR0/aE099H7XbvzkYuj-K_C1rw/view?utm_content=DAG2Jb33CR0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6cdbb94fbd",
+    title: "Mallam Aminu Kano International Airport Modern Parking & Ticketing System",
     category: "bim",
-    images: [project5Img1, project5Img2, project5Img3, project5Img4, project5Img5, project5Img6, project5Img7, project5Img8]
   },
-  { 
-    title: "Proposed Commercial Development", 
+  {
+    title: "Proposed Serviced Apartments Development",
     category: "bim",
-    images: [project6Img1, project6Img2, project6Img3, project6Img4, project6Img5, project6Img6, project6Img7]
+    images: [
+      project3Img1,
+      project3Img2,
+      project3Img3,
+      project3Img4,
+      project3Img5,
+      project3Img6,
+      project3Img7,
+      project3Img8,
+      project3Img9,
+    ],
+  },
+  {
+    title: "Proposed Commercial Development",
+    category: "bim",
+    images: [
+      project4Img1,
+      project4Img2,
+      project4Img3,
+      project4Img4,
+      project4Img5,
+      project4Img6,
+      project4Img7,
+      project4Img8,
+      project4Img9,
+      project4Img10,
+      project4Img11,
+    ],
+  },
+  {
+    title: "Proposed Residential Development",
+    category: "bim",
+    images: [
+      project5Img1,
+      project5Img2,
+      project5Img3,
+      project5Img4,
+      project5Img5,
+      project5Img6,
+      project5Img7,
+      project5Img8,
+    ],
+  },
+  {
+    title: "Proposed Commercial Development",
+    category: "bim",
+    images: [
+      project6Img1,
+      project6Img2,
+      project6Img3,
+      project6Img4,
+      project6Img5,
+      project6Img6,
+      project6Img7,
+    ],
   },
   // Structural Engineering Projects
   { title: "Structural Engineering Project 1", category: "structural", pdfFileId: "1TCNkRGTvnfJU5KESQNb-YzzPqhLcQlhG" },
   { title: "Structural Engineering Project 2", category: "structural", pdfFileId: "1rpNpxmfrysYZ5TqjJzigXaClksLfCDXo" },
-  { title: "Structural Engineering Project 3", category: "structural", pdfFileId: "1fPFUjQCrYB1V2X96hfSUlg9QB_djibkd" },
+  { title: "Structural Engineering Project 3", category: "structural", pdfFileId: "1fPFUjQCrY1V2X96hfSUlg9QB_djibkd" },
   { title: "Structural Engineering Project 4", category: "structural", pdfFileId: "1bnIF9DCkB35XjFC6i1JUKAWSPTb68EMW" },
   { title: "Structural Engineering Project 5", category: "structural", pdfFileId: "1bFUbDyBklxCQngkcM-T2srdoeYjCSFlx" },
   { title: "Structural Engineering Project 6", category: "structural", pdfFileId: "1beco7cvARwTVMb72ilLbNvlMx13aRHzZ" },
@@ -274,6 +350,34 @@ const Projects = () => {
     </Card>
   );
 
+  const ExternalLinkProjectCard = ({ project }: { project: Project }) => (
+    <Card
+      className="group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-border/50 hover:border-primary overflow-hidden cursor-pointer bg-card backdrop-blur-sm"
+      onClick={() => {
+        if (project.externalUrl) {
+          window.open(project.externalUrl, "_blank", "noopener,noreferrer");
+        }
+      }}
+    >
+      <div className="relative overflow-hidden aspect-video bg-gradient-to-br from-primary/20 via-primary/10 to-background">
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
+          <div className="bg-primary text-primary-foreground rounded-full p-5 transform group-hover:scale-110 transition-transform duration-500 shadow-2xl">
+            <Play className="w-10 h-10" fill="currentColor" />
+          </div>
+          <p className="text-sm font-medium text-foreground/80 group-hover:text-primary transition-colors">
+            Open Interactive Presentation
+          </p>
+        </div>
+      </div>
+
+      <div className="p-6 bg-gradient-to-b from-card to-card/50">
+        <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors line-clamp-2 leading-tight">
+          {project.title}
+        </h3>
+      </div>
+    </Card>
+  );
+
   const ProjectCard = ({ project }: { project: Project }) => {
     if (project.images) {
       return <ImageProjectCard project={project} />;
@@ -281,7 +385,13 @@ const Projects = () => {
     if (project.pdfFileId) {
       return <PdfProjectCard project={project} />;
     }
-    return <VideoProjectCard project={project} />;
+    if (project.youtubeUrl) {
+      return <VideoProjectCard project={project} />;
+    }
+    if (project.externalUrl) {
+      return <ExternalLinkProjectCard project={project} />;
+    }
+    return null;
   };
 
   const EmptyState = () => (
