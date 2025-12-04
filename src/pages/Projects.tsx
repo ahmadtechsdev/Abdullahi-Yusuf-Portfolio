@@ -185,7 +185,7 @@ const projects: Project[] = [
   // Structural Engineering Projects
   { title: "Structural Engineering Project 1", category: "structural", pdfFileId: "1TCNkRGTvnfJU5KESQNb-YzzPqhLcQlhG" },
   { title: "Structural Engineering Project 2", category: "structural", pdfFileId: "1rpNpxmfrysYZ5TqjJzigXaClksLfCDXo" },
-  { title: "Structural Engineering Project 3", category: "structural", pdfFileId: "1fPFUjQCrY1V2X96hfSUlg9QB_djibkd" },
+  { title: "Structural Engineering Project 3", category: "structural", pdfFileId: "1fPFUjQCrYB1V2X96hfSUlg9QB_djibkd" },
   { title: "Structural Engineering Project 4", category: "structural", pdfFileId: "1bnIF9DCkB35XjFC6i1JUKAWSPTb68EMW" },
   { title: "Structural Engineering Project 5", category: "structural", pdfFileId: "1bFUbDyBklxCQngkcM-T2srdoeYjCSFlx" },
   { title: "Structural Engineering Project 6", category: "structural", pdfFileId: "1beco7cvARwTVMb72ilLbNvlMx13aRHzZ" },
