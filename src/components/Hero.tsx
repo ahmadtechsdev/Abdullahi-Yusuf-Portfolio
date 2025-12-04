@@ -1,10 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import profileHero from "@/assets/profile-hero.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   const scrollToProjects = () => {
-    window.location.href = "/projects";
+    navigate("/projects");
   };
 
   return (
