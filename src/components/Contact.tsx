@@ -171,7 +171,7 @@ const Contact = () => {
           {/* Quote Card - full width */}
           <Card className="mt-10 p-8 bg-primary border-0 shadow-2xl hover:shadow-primary/30 transition-all duration-500 hover:scale-[1.02] relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent" />
-            <blockquote className="relative text-primary-foreground">
+            <blockquote className="relative text-primary-foreground text-center max-w-2xl mx-auto">
               <p className="text-lg font-medium mb-3 leading-relaxed">
                 "Let's collaborate to bring your vision to life with cutting-edge BIM solutions."
               </p>
